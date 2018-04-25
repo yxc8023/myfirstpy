@@ -1,5 +1,5 @@
+
 import requests
-import re
 from bs4 import BeautifulSoup
 import re
 
@@ -23,7 +23,7 @@ for i in range(4477,4477):
        [a.extract() for a in soup('.center')] 
        dr = re.compile(r'<[^>]+>',re.S)
        bb= dr.sub('',str(a))
-       f=open("one112.txt","a",encoding='utf-8')#将每句话写入这个txt文件中，先打开
+       f=open("one12.txt","a",encoding='utf-8')#将每句话写入这个txt文件中，先打开
        f.writelines('\n')
        f.writelines(str(b).replace('<h1>','').replace('</h1>',''))
        f.writelines('\n')
